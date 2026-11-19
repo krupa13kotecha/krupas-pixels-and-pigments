@@ -59,7 +59,7 @@ export function Header() {
       let next = false;
       document.querySelectorAll<HTMLElement>("[data-header-zone]").forEach((el) => {
         const r = el.getBoundingClientRect();
-        if (r.top <= y && r.bottom > y) next = el.dataset.headerZone === "dark";
+        if (r.top <= y && r.bottom > y) next = el.dataset["headerZone"] === "dark";
       });
       setDark(next);
     };

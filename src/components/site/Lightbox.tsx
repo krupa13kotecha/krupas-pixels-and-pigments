@@ -35,10 +35,10 @@ export function Lightbox({ items, index, onClose, onIndex }: { items: Artwork[];
           style={{ background: "color-mix(in oklab, var(--c-caput) 70%, black 30% / 0.9)" }}
           initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
           onClick={onClose}
-          onTouchStart={(e) => (touch.current = e.touches[0].clientX)}
+          onTouchStart={(e) => (touch.current = e.touches[0]?.clientX ?? null)}
           onTouchEnd={(e) => {
             if (touch.current === null) return;
-            const dx = e.changedTouches[0].clientX - touch.current;
+            const dx = (e.changedTouches[0]?.clientX ?? touch.current) - touch.current;
             if (Math.abs(dx) > 50) (dx > 0 ? prev : next)();
             touch.current = null;
           }}
