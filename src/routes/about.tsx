@@ -38,7 +38,6 @@ function About() {
                   <Placeholder label="Your photo here" alt="Krupa Kotecha" />
                 </div>
               </div>
-              <p className="hand mt-5 text-center text-caput">F1, table tennis, running, books, paint</p>
             </div>
           </Reveal>
         </div>

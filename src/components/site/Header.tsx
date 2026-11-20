@@ -71,7 +71,7 @@ export function Header() {
   }, [path]);
 
   return (
-    <header className={`sticky top-0 z-40 ${dark ? "header-dark" : ""}`}>
+    <header className={`fixed inset-x-0 top-0 z-50 ${dark ? "header-dark" : ""}`}>
       <div className="header-fill" style={{ background: "var(--header-bg)", color: "var(--header-fg)" }}>
         <nav aria-label="Main" className="container-k relative flex h-16 items-center justify-between md:h-[72px]">
           <Link to="/" className="font-display text-2xl font-bold md:text-[1.75rem]" style={{ color: "var(--header-fg)" }}>
@@ -107,7 +107,7 @@ export function Header() {
           )}
         </AnimatePresence>
       </div>
-      <Wave color="var(--header-bg)" drift={false} className="-mt-px" />
+      <Wave color="var(--header-bg)" className="-mt-px" />
     </header>
   );
 }

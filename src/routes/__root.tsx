@@ -142,6 +142,7 @@ function Themed() {
     <div data-theme={theme} className="page-root flex flex-col">
       <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:left-2 focus:top-2 focus:z-50 focus:rounded focus:bg-cream focus:p-2 focus:text-caput">Skip to content</a>
       <Header />
+      <div aria-hidden className="h-[82px] shrink-0 md:h-[90px]" />
       <motion.main id="main" key={path} className="flex-1" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }}>
         {/* Required: nested routes render here. */}
         <Outlet />

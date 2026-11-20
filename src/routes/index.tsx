@@ -73,13 +73,6 @@ function Home() {
           </div>
         </div>
       </section>
-      <div className="overflow-hidden border-y-2 border-dashed border-caput/50 py-3 text-caput" aria-label="Currently learning: LLMs and RAG pipelines">
-        <div aria-hidden className="marquee-track flex w-max gap-12 whitespace-nowrap">
-          {Array.from({ length: 12 }).map((_, i) => (
-            <span key={i} className="hand">currently learning: LLMs and RAG pipelines ✦</span>
-          ))}
-        </div>
-      </div>
       <div className="h-10" />
     </>
   );
