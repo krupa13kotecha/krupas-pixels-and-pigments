@@ -17,9 +17,6 @@ concurrency:
 
 jobs:
   deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
 
     steps:
@@ -35,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build website
         run: npm run build
 
       - name: Setup Pages
@@ -47,5 +44,4 @@ jobs:
           path: ./dist
 
       - name: Deploy
-        id: deployment
         uses: actions/deploy-pages@v4
