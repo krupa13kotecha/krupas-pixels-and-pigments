@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Wave } from "./Wave";
 
 const links = [
+  { to: "/", label: "Home" },
   { to: "/projects", label: "Projects" },
   { to: "/artwork", label: "Artwork" },
   { to: "/about", label: "About" },
